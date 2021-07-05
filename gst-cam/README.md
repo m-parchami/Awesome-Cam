@@ -56,7 +56,7 @@ cap = cv2.VideoCapture('videotestsrc ! videoconvert ! appsink')
 
 ## Tips
 
-1. Gstremaer is highly efficient for video processing. For one thing, all elements are run in separate threads! Therefore, it is recommended to implement your basic processes via the pipeline. For instance, if you always want to resize the input frames you can write this:
+1. Gstremaer is highly efficient for video processing. For one thing, all elements run in separate threads! Therefore, it is recommended to implement your basic processes via the pipeline. For instance, if you always want to resize the input frames you can write this:
 ```Python
 cap = cv2.VideoCapture('autovideosrc ! videoscale ! video/x-raw,width=800,height=400 ! videoconvert ! appsink')
 ```
